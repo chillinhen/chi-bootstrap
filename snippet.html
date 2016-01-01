@@ -1,0 +1,38 @@
+<div class="news_short block row <?php echo $this->class; ?>">
+
+    <?php if ($this->hasMetaFields): ?>
+        <div class="info small text-right text-muted col-md-12">
+    	<em><?php echo $this->date; ?> <?php echo $this->author; ?> <?php echo $this->commentCount; ?></em></div>
+    <?php endif; ?>
+
+    <?php if ($this->addImage): ?>
+        <div class="col-md-3">
+
+    	<div class="image_container"<?php if ($this->margin || $this->float) : ?> style="<?php echo $this->margin . $this->float; ?>"<?php endif; ?>>
+		<?php if ($this->fullsize): ?>
+		    <a href="<?php echo $this->href; ?>" title="<?php echo $this->alt; ?>" rel="lightbox">
+		    <?php endif; ?>
+    		<img src="<?php echo $this->src; ?>" alt="<?php echo $this->alt;
+		echo $this->caption; ?>" />
+		<?php if ($this->fullsize): ?></a><?php endif; ?>
+    	    <br>
+		    <?php if ($this->caption): ?>
+		    <div class="caption small">
+		    <?php echo $this->caption; ?>
+		    </div>
+    <?php endif; ?>
+
+    	</div>
+
+        </div>
+        <div class="col-md-9">
+	    <h3><?php echo $this->linkHeadline; ?></h3>
+	</div>
+
+    <?php else : ?>
+        <div class="col-md-12">
+	    <h3><?php echo $this->linkHeadline; ?></h3>
+	</div>
+<?php endif; ?>
+
+</div>
