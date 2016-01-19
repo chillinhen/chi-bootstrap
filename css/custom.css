@@ -150,7 +150,7 @@ aside .mod_article h4{
     margin:0 0 1.5em; 
    font-size: 1.7em;
    word-break: break-word;
-   width: 95%;
+   width: 99%;
 }
 
 
@@ -213,6 +213,9 @@ input[type="submit"], .button,
     border-radius:18px;
     position: relative;
 }
+aside form input[type="submit"].btn-primary{
+	float: right;
+}
 .btn-primary:before, input[type="submit"].btn-primary:after{
 	content: ' ';
 	background: transparent url('../img/button-cd.svg') 0 0 no-repeat;
@@ -244,8 +247,9 @@ form {
     width: 100%;
 }
 aside form {
-    margin: 0 1em;
-    width: 80%;
+/*    margin: 0 1em;
+    width: 80%;*/
+
 }
 
 input[type="submit"] {
